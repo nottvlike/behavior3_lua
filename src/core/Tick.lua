@@ -1,6 +1,6 @@
 require 'b3'
 
-local tick = b3.Class()
+local tick = b3.Class("Tick")
 b3.Tick = tick
 
 function tick:ctor()
@@ -11,10 +11,6 @@ function tick:ctor()
 
 	self._openNodes = {}
 	self._nodeCount = 0
-end
-
-function tick:initialize()
-
 end
 
 function tick:_enterNode(node)

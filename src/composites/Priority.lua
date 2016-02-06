@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Composite'
 
-local priority = b3.Class(b3.Composite)
+local priority = b3.Class("Priority", b3.Composite)
 b3.Priority = priority
 
 function priority:ctor()
+	b3.Composite.ctor(self)
+
 	self.name = "Priority"
 end
 

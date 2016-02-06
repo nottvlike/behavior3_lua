@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Action'
 
-local error = b3.Class(b3.Action)
+local error = b3.Class("Error", b3.Action)
 b3.Error = error
 
 function error:ctor()
+	b3.Action.ctor(self)
+	
 	self.name = "Error"
 end
 

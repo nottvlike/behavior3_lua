@@ -1,6 +1,6 @@
 require 'b3'
 
-local blackboard = b3.Class()
+local blackboard = b3.Class("Blackboard")
 b3.Blackboard = blackboard
 
 function blackboard:ctor()

@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Decorator'
 
-local maxTime = b3.Class(b3.Decorator)
+local maxTime = b3.Class("MaxTime", b3.Decorator)
 b3.MaxTime = maxTime
 
 function maxTime:ctor(params)
+	b3.MaxTime.ctor(self)
+
 	self.name = "MaxTime"
 	self.title = "Max <maxTime>ms"
 	self.parameters = {maxTime = 0}

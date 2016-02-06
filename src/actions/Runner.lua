@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Action'
 
-local runner = b3.Class(b3.Action)
+local runner = b3.Class("Runner", b3.Action)
 b3.Runner = runner
 
 function runner:ctor()
+	b3.Action.ctor(self)
+
 	self.name = "Runner"
 end
 

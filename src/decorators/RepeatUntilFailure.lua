@@ -1,10 +1,10 @@
-require "b3"
 require "core.Decorator"
 
-local repeatUntilFailure = b3.Class(b3.Decorator)
+local repeatUntilFailure = b3.Class("RepeatUntilFailure", b3.Decorator)
 b3.RepeatUntilFailure = repeatUntilFailure
 
 function repeatUntilFailure:ctor(params)
+	b3.Decorator.ctor(self)
 
 	if not params then
 		params = {}
@@ -15,10 +15,6 @@ function repeatUntilFailure:ctor(params)
 	self.parameters = {maxLoop = -1}
 
 	self.maxLoop = params.maxLoop or -1
-end
-
-function repeatUntilFailure:initialize(params)
-
 end
 
 function repeatUntilFailure:open(tick)

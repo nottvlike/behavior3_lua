@@ -1,7 +1,6 @@
-require 'b3'
 require 'core.Tick'
 
-local behaviorTree = b3.Class()
+local behaviorTree = b3.Class("BehaviorTree")
 b3.BehaviorTree = behaviorTree
 
 function behaviorTree:ctor()
@@ -13,13 +12,10 @@ function behaviorTree:ctor()
 	self.debug			= nil
 end
 
-function behaviorTree:initialize()
-
-end
-
-function behaviorTree:load(data, names)
+function behaviorTree:load(jsonData, names)
 	names = names or {}
-
+	local data = json.decode(jsonData)
+	
 	self.title 			= data.title or self.title
 	self.description 	= data.description or self.description
 	self.properties 	= data.properties or self.properties

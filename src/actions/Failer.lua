@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Action'
 
-local failer = b3.Class(b3.Action)
+local failer = b3.Class("Failer", b3.Action)
 b3.Failer = failer
 
 function failer:ctor()
+	b3.Action.ctor(self)
+	
 	self.name = "Failer"
 end
 

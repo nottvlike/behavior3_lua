@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Action'
 
-local succeeder = b3.Class(b3.Action)
+local succeeder = b3.Class("Succeeder", b3.Action)
 b3.Succeeder = succeeder
 
 function succeeder:ctor()
+	b3.Action.ctor(self)
+
 	self.name = "Succeeder"
 end
 

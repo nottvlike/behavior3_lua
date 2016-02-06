@@ -1,10 +1,11 @@
-require 'b3'
 require 'core.Decorator'
 
-local inverter = b3.Class(b3.Decorator)
+local inverter = b3.Class("Inverter", b3.Decorator)
 b3.Inverter = inverter
 
 function inverter:ctor()
+	b3.Inverter.ctor(self)
+
 	self.name = "Inverter"
 end
 

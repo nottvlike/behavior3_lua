@@ -1,13 +1,8 @@
-require 'b3'
 require 'core.BaseNode'
 
-local condition = b3.Class(b3.BaseNode)
+local condition = b3.Class("Condition", b3.BaseNode)
 b3.Condition = condition
 
 function condition:ctor(params)
-
-end
-
-function condition:initialize(params)
-
+	b3.BaseNode.ctor(self, params)
 end

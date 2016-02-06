@@ -1,6 +1,6 @@
 require 'b3'
 
-local baseNode = b3.Class()
+local baseNode = b3.Class("BaseNode")
 b3.BaseNode = baseNode
 
 function baseNode:ctor(params)
@@ -12,12 +12,7 @@ function baseNode:ctor(params)
 	self.properties = {}
 end
 
-function baseNode:initialize(params)
-
-end
-
 function baseNode:_execute(tick)
-	print(tick)
 	--ENTER
 	self:_enter(tick)
 
@@ -41,7 +36,6 @@ function baseNode:_execute(tick)
 end
 
 function baseNode:_enter(tick)
-	print(tick)
 	tick:_enterNode(self)
 	self:enter(tick)
 end
@@ -64,8 +58,8 @@ function baseNode:_close(tick)
 end
 
 function baseNode:_exit(tick)
-	tick._exitNode(self)
-	self.exit(tick)
+	tick:_exitNode(self)
+	self:exit(tick)
 end
 
 function baseNode:enter(tick)

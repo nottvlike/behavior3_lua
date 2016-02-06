@@ -3,7 +3,6 @@ Behavior3Lua是Behavior3 Editor的lua接口版本实现。
 Behavior3 Editor是基于web的behavior tree设计工具，可以导出为json格式，我看到官网里面只提供了python和js版本的接口，所以自己实现了一套lua版本的接口。
 
 相比官方接口，还未更改的部分：
-*   支持解析json文件，目前仅测试了lua写的table文件
 *   behavior tree的dump接口未实现
 
 参考:
